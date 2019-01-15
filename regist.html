@@ -1,0 +1,153 @@
+<html>
+  <head>
+	<title>
+		Registrasi COMPRO
+		</title>
+  <link href="bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="bootstrap.min.js"></script>
+<script src="jquery.min.js"></script>
+<script>
+ function validateForm() {
+  var nama = document.forms["myForm"]["fname"].value;
+  var notelp = document.forms["myForm"]["fnotelp"].value;
+  var email = document.forms["myForm"]["femail"].value;
+  var pass = document.forms["myForm"]["fpass"].value;
+  var alam = document.forms["myForm"]["falamat"].value;
+  if (nama == "") {
+    alert("Harap Mengisi Nama");
+    return false;
+	} else if(notelp==""){
+	alert("Harap Mengisi No telp");
+	return false;
+	} else if(email==""){
+	alert("Harap Mengisi Email");
+	return false;
+	}else if(pass==""){
+	alert("Harap Mengisi Password");
+	return false;
+	}else if(alam==""){
+	alert("Harap Mengisi Alamat");
+	return false; 
+	}
+}
+ function tampilkan(){
+  var nama = document.forms["myForm"]["fname"].value;
+  var notelp = document.forms["myForm"]["fnotelp"].value;
+  var email = document.forms["myForm"]["femail"].value;
+  var pass = document.forms["myForm"]["fpass"].value;
+  var alam = document.forms["myForm"]["falamat"].value;
+	}
+</script>
+  </head>
+  <style>
+  body#LoginForm{ 
+	background-image:url("img/back2.jpg"); 
+	background-position:center; 
+	background-size:cover; 
+	padding:10px;}
+
+.form-heading { 
+		color:#DC143C ;; 
+		font-size:23px;
+		}
+.panel h2{ color:#444444; font-size:18px; margin:0 0 8px 0;}
+.panel p { color:#777777; font-size:14px; margin-bottom:30px; line-height:24px;}
+.login-form .form-control {
+  background: #f7f7f7 none repeat scroll 0 0;
+  border: 1px solid #d4d4d4;
+  border-radius: 4px;
+  font-size: 14px;
+  height: 50px;
+  line-height: 50px;
+}
+.main-div {
+  background: #ffffff none repeat scroll 0 0;
+  border-radius: 2px;
+  margin: 10px auto 30px;
+  max-width: 90%;
+  padding: 30px 50px 50px 51px;
+}
+
+.login-form .form-group {
+  margin-bottom:10px;
+}
+.login-form{ text-align:center;}
+.forgot a {
+  color: #777777;
+  font-size: 14px;
+  text-decoration: underline;
+}
+.login-form  .btn.btn-primary {
+  background: #f0ad4e none repeat scroll 0 0;
+  border-color: #f0ad4e;
+  color: #ffffff;
+  font-size: 14px;
+  width: 100%;
+  height: 50px;
+  line-height: 50px;
+  padding: 0;
+}
+.forgot {
+  text-align: left; margin-bottom:30px;
+}
+.botto-text {
+  color: #ffffff;
+  font-size: 14px;
+  margin: auto;
+}
+.login-form .btn.btn-primary.reset {
+  background: #ff9900 none repeat scroll 0 0;
+}
+.back { text-align: left; margin-top:10px;}
+.back a {color: #444444; font-size: 13px;text-decoration: none;}
+.img-thumbnail{
+	background-color:#ffffff00;
+	border:none;
+	width:50%;
+}
+.radio{
+	text-align:left;
+	}
+  </style>
+<body id="LoginForm">
+<div class="container">
+<h1 class="form-heading">Account Login</h1>
+<img src="img/logo.png" class="img-thumbnail" >
+<div class="login-form">
+<div class="main-div">
+    <div class="panel">
+   <h2>Registrasi Member</h2>
+   </div>
+    <form name="myForm" action="action_page.php" onsubmit="return validateForm()" method="post">
+		<div class="form-group">
+            <input type="text" class="form-control" id="inputNama" placeholder="Nama" name="fname">
+        </div>
+		<div class="form-group">
+            <input type="text" class="form-control" id="inputnomor" placeholder="No Telp" name="fnotelp">
+        </div>
+        <div class="form-group">
+            <input type="email" class="form-control" id="inputEmail" placeholder="Email Address" name="femail">
+        </div>
+        <div class="form-group">
+            <input type="password" class="form-control" id="inputPassword" placeholder="Password" name="fpass">
+        </div>
+		 <div class="form-group">
+		  <input type="textarea" class="form-control" rows="5" id="Alamat" placeholder="Alamat" name="falamat">
+		</div> 
+		
+		<div class="radio">
+		Paket Yang Dibeli:<br>
+		  <label><input type="radio" value="basic" name="paket" checked>Paket Basic Rp 4.050.000</label>
+		</div>
+		<div class="radio">
+		  <label><input type="radio" value="advanced"name="paket">Paket Advanced Rp 13.500.000</label>
+		</div>
+        <button type="submit" class="btn btn-primary" value="submit">Registrasi</button>
+		<br><h2>Sudah menjadi Member?</h2><br>
+		<a href="login.html"> <button type="button" class="btn btn-primary">Login</button></a>
+		<h2><a href="index.html">Apa itu Compro?</a></h2>
+    </form>
+    </div>
+</div></div></div>
+</body>
+</html>
