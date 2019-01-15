@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>COMPRO Indonesia</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="bootstrap.min.css">
+  <script src="jquery.min.js"></script>
+  <script src="bootstrap.min.js"></script>
+</head>
+<style>
+.item1 { grid-area: header}
+.item2 { grid-area: nav; }
+.item3 { grid-area: menu; }
+.item4 { grid-area: main; }
+.item5 { grid-area: footer; }
+
+.img-thumbnail2{
+	width:90%;
+}
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    'header header header header header header'
+    'nav nav nav nav nav nav'
+    'main main main main main menu'
+    ' footer footer footer footer footer menu';
+  grid-gap: 5px;
+  background-color: #404040;
+  padding: 10px;
+}
+.grid-container > div {
+  background-color: rgba(255, 255, 255, 0.8);
+  text-align: left;
+  padding: 20px;
+  font-size: 16px;
+}
+nav li {
+	margin:10px;
+	display: inline;
+	margin-right: 40px;}
+	nav li a {
+	color: #F0194C;}
+	nav li a:hover, nav li a.current {
+	color: #000000;}
+
+h4{
+	font-size:30px;
+	padding:20px;
+	}
+
+
+article {
+	clear: both;
+	overflow: auto;
+	margin:5px;
+	width: 100%;}
+.li2{
+	float:right;
+}
+.thumbnail{
+	background-color:#d9d9d9
+	}
+h3{
+	text-align:center;
+	size:90%;
+}
+.container{
+	width:95%;
+}
+
+</style>
+<body>
+
+<div class="grid-container">
+  <div class="item1">
+	<img src="img/header.png" class="img-thumbnail2" >
+	<marquee>Simple Way to Make Application</marquee>
+  </div>
+        <div class="item2">
+		<nav>
+				<li><a href="home.html" >Home</a></li>
+				<li><a href="produk.html" class="current">Produk</a></li>
+				<li><a href="ctc.html">Contact Us</a></li>
+					<div class="li2">
+				<li><a href="login.html">Login Member</a></li>
+					</div>
+				</nav>
+	</div>
+  <div class="item3">
+	<section class="popular">
+   <h2>Paket</h2>
+     <a href="basic.html">Basic</a><br>
+     <a href="adva.html">Advanced</a>
+  </section>
+  <section class="contact">
+   <h2>Kontak</h2>
+    <p>Ervin Kongdinata<br>
+    <img src="img/wa.png"width="20px";height="20px";>: 085211008868<br>
+	<img src="img/ig.png"width="20px";height="20px";>: Compro Indonesia </p>
+	</section>
+  </div>
+    <div class="item4">
+  	<div class="container">
+  <h2>Produk</h2>
+  <div class="row">
+    <div class="col-md-5">
+      <div class="thumbnail">
+          <a href="basic.html"><img src="img/basic.png" alt="basic" style="width:100%">
+          <div class="caption">
+            <h3>Rp 4.050.000.</h3></a>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div class="col-md-5">
+      <div class="thumbnail">
+          <a href="adva.html"><img src="img/adv.png" alt="advance" style="width:100%">
+          <div class="caption">
+            <h3>Rp 13.500.000</h3></a>
+          </div>
+        </a>
+      </div>
+    </div>
+
+  </div>
+</div>
+	<h2>Perbedaan Basic dan Advance</h2>
+	<img src="img/beda.jpg" class="img-thumbnail"/> 
+  </div>  
+  <div class="item5">&copy 2018 Ervin Kongdinata</div>
+</div>
+</body>
+</html>
